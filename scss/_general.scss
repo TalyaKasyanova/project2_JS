@@ -1,0 +1,17 @@
+@use "variables";
+
+* {
+  scroll-behavior: smooth;
+}
+
+.container {
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+a {
+  cursor: pointer;
+  outline: 0;
+}

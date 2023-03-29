@@ -1,0 +1,105 @@
+@use "variables";
+
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 53px;
+    width: 100%;
+    padding-left: calc((100% - 1170px) / 2);
+    padding-right: calc((100% - 1170px) / 2);
+    z-index: 3;
+
+    .flex-container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-logo {
+        transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
+
+        img {
+            width: 241px;
+            height: 54px;
+        }
+
+        &:hover,
+        &:focus {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.nav {
+
+    &-header {
+        margin-left: 154px;
+        margin-right: 120px;
+    }
+
+    &-list {
+        display: flex;
+        @extend %nav-header;
+        justify-content: space-between;
+        align-items: center;
+        gap: 70px;
+
+        &-item {
+            position: relative;
+            transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
+
+            &::before {
+                content: '';
+                display: block;
+                width: 9px;
+                height: 9px;
+                border: 1px solid $bg-color;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translateY(-50%);
+            }
+
+            &:hover,
+            &:focus {
+                transform: scale(1.1);
+
+                &::before {
+                    background-color: $bg-color;
+                }
+            }
+        }
+    }
+}
+
+.social {
+    &-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+
+        &-item {
+            .logo-icon {
+                width: 40px;
+                height: 40px;
+                border: 1px solid $bg-color;
+                border-radius: 50%;
+                padding: 11px;
+                transition: all 0.3s cubic-bezier(.19, .64, .96, .41);
+
+                use {
+                    fill: $bg-color;
+                }
+
+                &:hover,
+                &:focus {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
