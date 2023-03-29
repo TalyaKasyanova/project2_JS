@@ -99,7 +99,7 @@ const smoothLinks = [{
   },
   {
     link: '.nav-list-contact',
-    section: '.footer'
+    section: '.form-header'
   }
 ];
 
